@@ -1,0 +1,32 @@
+{% extends 'shared/base.html' %} 
+
+{% block content %}
+
+<div class="page-header">Variety is the Spice</div>
+        
+
+<section class="list-container">
+    <div class="list-box">
+        <form action="{% url 'icecreamapp:variety_list' %}" method="post">
+        
+            {% csrf_token %}
+            <fieldset>
+                <label for="namne">Name: </label>
+                <input type="text" id="name" name="name" value="">
+            </fieldset>
+            
+            <fieldset>
+                <label for="country">Country: </label>
+                <input type="text" id="country" name="country" value="">
+            </fieldset>
+           
+            
+            <input class="bang-button color3 border-radius-bottom" type="submit" value="add"/>
+           
+
+        </form>
+    </div>
+</section>
+
+        {% endblock %}
+   

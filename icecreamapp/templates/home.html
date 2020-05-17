@@ -1,0 +1,15 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block content %}
+<form action="{% url 'icecreamapp:variety_form' %}" method='GET'>
+    <button>add</button>
+</form>
+<div>Varieties</div>
+
+
+
+{% for flavor in flavors %}
+<div>{{flavor.name}}</div>
+{% endfor %}
+{% endblock content %}
